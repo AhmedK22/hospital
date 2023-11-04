@@ -1,0 +1,24 @@
+<?php
+
+namespace Modules\Doctor\Entities;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Modules\Appointment\Entities\Appointment;
+
+class Doctor extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [];
+    
+    protected static function newFactory()
+    {
+        return \Modules\Doctor\Database\factories\DoctorFactory::new();
+    }
+
+    public function appointment()
+    {
+        return $this->hasMany(Appointment::class);
+    }
+}

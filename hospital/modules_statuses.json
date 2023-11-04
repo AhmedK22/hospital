@@ -1,0 +1,6 @@
+{
+    "Admin": true,
+    "Doctor": true,
+    "Patient": true,
+    "Appointment": true
+}
